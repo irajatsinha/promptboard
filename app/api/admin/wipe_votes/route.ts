@@ -1,7 +1,8 @@
-// app/api/admin/wipe_votes/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import sql from '@/lib/db';
 import { hotScore } from '@/lib/utils';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
