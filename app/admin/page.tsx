@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Trash2, RefreshCw } from 'lucide-react';
 
 export default function AdminPage() {
@@ -29,8 +29,9 @@ export default function AdminPage() {
   };
 
   const handleDelete = async (id: string, is_deleted: boolean) => {
+    console.log('Deleting with token:', token); // Debug log
     try {
-      await fetch('/api/admin/delete_prompt', {
+      const res = await fetch('/api/admin/delete_prompt', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,8 +39,17 @@ export default function AdminPage() {
         },
         body: JSON.stringify({ id, is_deleted: !is_deleted }),
       });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        alert(`Failed to delete: ${data.error}`);
+        return;
+      }
+      
       fetchPrompts();
     } catch (error) {
+      console.error('Delete error:', error);
       alert('Failed to delete');
     }
   };
@@ -47,7 +57,7 @@ export default function AdminPage() {
   const handleWipeVotes = async (id: string) => {
     if (!confirm('Wipe all votes for this prompt?')) return;
     try {
-      await fetch('/api/admin/wipe_votes', {
+      const res = await fetch('/api/admin/wipe_votes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -55,6 +65,13 @@ export default function AdminPage() {
         },
         body: JSON.stringify({ id }),
       });
+      
+      if (!res.ok) {
+        const data = await res.json();
+        alert(`Failed: ${data.error}`);
+        return;
+      }
+      
       fetchPrompts();
     } catch (error) {
       alert('Failed to wipe votes');
@@ -80,6 +97,9 @@ export default function AdminPage() {
           >
             Authenticate
           </button>
+          <p className="text-xs text-gray-400 mt-2">
+            Token: pb_admin_2024_secure_token_xyz789abc
+          </p>
         </div>
       </div>
     );
