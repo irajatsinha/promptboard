@@ -1,4 +1,5 @@
 // app/api/admin/recompute_hot/route.ts
+export const dynamic = 'force-dynamic';
 import { NextRequest, NextResponse } from 'next/server';
 import sql from '@/lib/db';
 import { hotScore } from '@/lib/utils';
