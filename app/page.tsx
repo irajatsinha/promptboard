@@ -498,7 +498,8 @@ export default function Home() {
                         : 'bg-white border-gray-200'
                     } hover:shadow-lg transition cursor-pointer`}
                     onClick={(e) => {
-                      if (!e.target.closest('button')) {
+                      const target = e.target as HTMLElement;
+                      if (target && !target.closest('button')) {
                         setSelectedPrompt(prompt);
                       }
                     }}
