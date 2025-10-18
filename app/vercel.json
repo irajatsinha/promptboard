@@ -1,0 +1,8 @@
+{
+    "crons": [
+      {
+        "path": "/api/admin/recompute_hot?token=pb_admin_2024_secure_token_xyz789abc",
+        "schedule": "*/15 * * * *"
+      }
+    ]
+  }

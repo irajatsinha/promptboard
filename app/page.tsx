@@ -310,13 +310,13 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <aside
-            className={`lg:col-span-1 ${
-              theme === 'dark'
-                ? 'bg-gray-800 border-gray-700'
-                : 'bg-white border-gray-200'
-            } rounded-lg border p-6 h-fit sticky top-24`}
-          >
+        <aside
+  className={`lg:col-span-1 ${
+    theme === 'dark'
+      ? 'bg-gray-800 border-gray-700'
+      : 'bg-white border-gray-200'
+  } rounded-lg border p-6 h-fit lg:sticky lg:top-24`}
+>
             <h2 className="text-xl font-bold mb-4">Share a prompt</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
