@@ -267,11 +267,18 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between gap-4">
-            <div>
-              <h1 className="text-2xl font-bold">PromptBoard</h1>
-              <p className="text-sm opacity-70">
-                Simple, public, no-login prompt sharing
-              </p>
+          <div className="flex items-center gap-3">
+              <img 
+                src="/logo.webp" 
+                alt="PromptBoard Logo" 
+                className="w-10 h-10 flex-shrink-0"
+              />
+              <div>
+                <h1 className="text-2xl font-bold">PromptBoard</h1>
+                <p className="text-sm opacity-70">
+                  Simple, public, no-login prompt sharing
+                </p>
+              </div>
             </div>
             <div className="flex items-center gap-3">
               <div className="relative hidden md:block">
