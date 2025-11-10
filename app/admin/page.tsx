@@ -97,9 +97,6 @@ export default function AdminPage() {
           >
             Authenticate
           </button>
-          <p className="text-xs text-gray-400 mt-2">
-            Token: pb_admin_2024_secure_token_xyz789abc
-          </p>
         </div>
       </div>
     );
