@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="386px" height="112px" viewBox="0 0 386 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Frame</title>
+    <defs>
+        <path d="M0,0 L386,0 L386,112 L0,112 L0,0 Z" id="path-1"></path>
+        <linearGradient x1="2.71523385%" y1="44.7112062%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#1F6AD6" offset="0%"></stop>
+            <stop stop-color="#FF45F9" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="111" height="111" rx="8.12968731"></rect>
+        <filter x="-2.3%" y="-2.3%" width="109.0%" height="109.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="5" dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.839215686   0 0 0 0 0.298039216   0 0 0 0 0.952941176  0 0 0 0.112297858 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Frame" stroke="none" fill="none" xlink:href="#path-1">
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            <use fill="url(#linearGradient-2)" fill-rule="evenodd" xlink:href="#path-3"></use>
+        </g>
+        <g id="p" stroke-width="1" fill-rule="evenodd" transform="translate(31, 29)" fill="#FFFFFF">
+            <path d="M30.7692308,0 C43.5897436,0 50,6.42857143 50,19.2857143 C50,32.1428571 43.5897436,38.5714286 30.7692308,38.5714286 L23.0769231,38.5714286 L23.0769231,23.1428571 L30.7692308,23.1428571 C33.3333333,23.1428571 34.6153846,21.8571429 34.6153846,19.2857143 C34.6153846,16.7142857 33.3333333,15.4285714 30.7692308,15.4285714 L19.2307692,15.4285714 L19.2307692,54 L3.84615385,54 L3.84615385,3.85714286 L0,0 L30.7692308,0 Z" id="Path" fill-rule="nonzero"></path>
+        </g>
+        <text id="prompt" font-family="VampireWars, Vampire Wars" font-size="65.0375019" font-weight="normal" fill="#282828">
+            <tspan x="125" y="52">prompt</tspan>
+        </text>
+        <text id="board" font-family="VampireWars, Vampire Wars" font-size="58.5337517" font-weight="normal" fill="#282828">
+            <tspan x="136" y="99">board</tspan>
+        </text>
+    </g>
+</svg>

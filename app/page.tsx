@@ -269,11 +269,13 @@ export default function Home() {
           <div className="flex items-center justify-between gap-4">
           <div className="flex flex-col gap-1">
               <img 
-                src="/logo.webp" 
+                src={theme === 'dark' ? '/logo-dark.webp' : '/logo.webp'}
                 alt="PromptBoard - Simple, public, no-login prompt sharing" 
-                className="h-10 w-auto"
+                width={193}
+                height={56}
+                className="object-contain"
               />
-              <p className="text-xs opacity-70">
+              <p className="text-xs opacity-70 text-left">
                 Simple, public, no-login prompt sharing
               </p>
             </div>
